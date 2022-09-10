@@ -2,17 +2,8 @@ import React from "react";
 import { StyleSheet, TextInput, View, Button } from 'react-native';
 import styled from 'styled-components/native';
 
-// import '../post-add-form/post-add-form.css'
 
-const PostAddForm = (props) => {
-    // constructor(props) {
-    //     super(props);
-    //     this.state = {
-    //         text: ''
-    //     }
-    //     // this.valueChange = this.valueChange.bind(this);
-    //     // this.onSubmit = this.onSubmit.bind(this);
-    // }
+const PostAddForm = (props) => {    
     const [value, setValue] = React.useState('');    
 
     function onPress() {        
@@ -25,13 +16,11 @@ const PostAddForm = (props) => {
     console.log(value);        
 
     return (
-        <AddView
-            className="bottom-panel d-flex">
+        <AddView>
             <AddInput
                 value= {value}
                 placeholder="О чем вы думаете?"                
-                onChangeText={(text) => setValue(text)}
-                // value={this.state.text}
+                onChangeText={(text) => setValue(text)}                
             />
             <Button
                 title="Добавить"                    
